@@ -1,0 +1,20 @@
+{
+  "editable": [
+    "public/components/*",
+    "answer.md",
+    ".gitignore",
+    "package.json"
+  ],
+  "excludes": [
+    "challenge.json"
+  ],
+  "readme": {
+    "en": "README.md",
+    "ja": "README_ja.md"
+  },
+  "allowNewFile": true,
+  "test": "mocha --require ./test/setup.js --compilers js:babel-core/register --recursive",
+  "tags": [
+      "React"
+  ]
+}

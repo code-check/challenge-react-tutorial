@@ -30,7 +30,7 @@ npm test
    ReferenceError: FirstComponent is not defined
 ```
 - Make First Component Test status passing by creating react Component as `FirstComponent` in [FirstComponent.jsx](/public/components/FirstComponent.jsx)
-```
+```javascript
 class FirstComponent extends React.Component {
   constructor() {
     super();
@@ -52,7 +52,7 @@ class FirstComponent extends React.Component {
     - If you run `webpack-dev-server` in terminal you can see the react output at `http://localhost:8080/webpack-dev-server/`
 
 #### Run Test
-```
+```javascript
 npm test
 First Component
     ✓ renders without problems
@@ -76,7 +76,7 @@ First Component
 #### Specifications for Calculator
 - Calculator has two numbers for input, let's call them `num1` and `num2` respectively and one result, let's call it `result`.
 - Hence the constructor for Calculator component is as follows
-```
+```javascript
 constructor() {
   super();
   this.state = {
@@ -88,7 +88,7 @@ constructor() {
 ```
 - Calculator will have 2 input fields and 4 buttons for Add, Subtract, Multiply and Divide respectively.
 - Hence the render of Calculator Component will be as follows
-```
+```javascript
 render(){
   return (
     <div className="container text-center" style={{marginTop:16 + 'em'}}>

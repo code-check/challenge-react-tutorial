@@ -17,7 +17,7 @@
 - Let's build our first Component
 
 #### Run Test
-```
+```javascript
 npm install
 npm test
 ```

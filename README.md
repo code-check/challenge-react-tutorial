@@ -1,5 +1,5 @@
 # challenge-react-tutorial
-- Build a simple calculator in React
+Build a simple calculator in React
 
 ### What is React ?
 - React is just V in MVC.
@@ -17,11 +17,7 @@
 - Let's build our first Component
 
 #### Run Test
-```javascript
-npm install
-npm test
-```
-- Tests will fail with following message
+Run command `codecheck` on terminal. Tests will fail with following message.
 ```
 1) Calculator Component "before all" hook:
    ReferenceError: Calculator is not defined
@@ -29,7 +25,7 @@ npm test
 2) First Component "before all" hook:
    ReferenceError: FirstComponent is not defined
 ```
-- Make First Component Test status passing by creating react Component as `FirstComponent` in [FirstComponent.jsx](/public/components/FirstComponent.jsx)
+Make First Component Test status passing by creating react Component as `FirstComponent` in [FirstComponent.jsx](/public/components/FirstComponent.jsx)
 ```javascript
 class FirstComponent extends React.Component {
   constructor() {
@@ -52,13 +48,12 @@ class FirstComponent extends React.Component {
     - If you run `webpack-dev-server` in terminal you can see the react output at `http://localhost:8080/webpack-dev-server/`
 
 #### Run Test
-```javascript
-npm test
-First Component
-    ✓ renders without problems
-
-1 passing (73ms)
-1 failing
+Run command `codecheck` on terminal.
+```
+codecheck: Finish with code 1
+codecheck: tests  : 2
+codecheck: success: 1
+codecheck: failure: 1
 ```
 
 #### constructor
@@ -119,22 +114,13 @@ render(){
 - For input field we created InputNumber Component which uses `linkState` for linking data with that particular instance of component.
 
 #### setState
-- We can change the state using 'this.setState'. When that is called, React will re-render your component to reflect the updated state.
+We can change the state using `this.setState`. When that is called, React will re-render your component to reflect the updated state.
 
 #### Handling events
 - The handlers are defined inline
 - Be sure to 'bind' the context of the method to the class.
-- Earlier versions of React did this automatically, but in ES6 the you have to 'bind' events completely.
-
-#### Run Test
-```
-npm test
-npm ERR! Test failed.
-```
-- This is because functions called on button click are not defined
+- Earlier versions of React did this automatically, but in ES6 you have to 'bind' events completely.
 - Define functions _handleAdd(), _handleSub(), _handleMul(), _handleDiv() in Calculator Component.
-- Run Test
-  - Tests will fail
 - Now fix tests by writing functionality for addition, subtraction, multiplication and division in respective functions and set state of result variable.
   - You can write functionality for addition by writing following code in _handleAdd() function
   ```
@@ -144,16 +130,39 @@ npm ERR! Test failed.
   ```
   - Similarly write functionality for above defined functions.
 
-#### Run Test
-```
- 6 passing (155ms)
-```  
-
-References:
+**References:**
 - [...props](https://gist.github.com/sebmarkbage/07bbe37bc42b6d4aef81) aka JSX Spread Attributes
 - In next tutorial challenge we will cover Component LifeCycle (https://facebook.github.io/react/docs/component-specs.html)
   - data-binding
   - mounting
   - unmounting
 
-If you want some modifications or have ideas of how this challenge can be improved please let us know in [answer.md](answer.md)
+### Test Results *before* solving the challenge  
+```
+codecheck: Finish with code 2
+codecheck: tests  : 2
+codecheck: success: 0
+codecheck: failure: 2
+```
+
+### Test Results *after* solving the challenge
+```
+codecheck: Finish with code 0
+codecheck: tests  : 6
+codecheck: success: 6
+codecheck: failure: 0
+```
+--- --- ---
+## Run Tests
+To run tests locally install `codecheck` by running the following command in terminal.
+```
+$ npm install codecheck -g
+```
+To run tests in web editor please click in `RUN` button on left side of web editor.
+
+## Explain your code
+In [answer.md](answer.md) write a brief explanation 
+- About how your code works
+- Problems faced while solving the challenge
+- How you solved those problems
+- Improvements/Feedbacks are also welcomed

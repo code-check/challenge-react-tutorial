@@ -1,4 +1,0 @@
-build:
-  - npm install
-
-test: npm test

@@ -1,4 +1,7 @@
 {
+  "tags": [
+      "React"
+  ],
   "editable": [
     "public/components/*",
     "answer.md",
@@ -12,9 +15,7 @@
     "en": "README.md",
     "ja": "README_ja.md"
   },
+  "main": "public/index.html",
   "allowNewFile": true,
-  "test": "mocha --require ./test/setup.js --compilers js:babel-core/register --recursive",
-  "tags": [
-      "React"
-  ]
+  "test": "mocha --require ./test/setup.js --compilers js:babel-core/register --recursive"
 }
